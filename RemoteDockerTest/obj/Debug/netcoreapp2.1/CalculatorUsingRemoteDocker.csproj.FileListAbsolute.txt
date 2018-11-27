@@ -1,0 +1,10 @@
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\obj\Debug\netcoreapp2.1\CalculatorUsingRemoteDocker.csproj.CoreCompileInputs.cache
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\obj\Debug\netcoreapp2.1\CalculatorUsingRemoteDocker.AssemblyInfoInputs.cache
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\obj\Debug\netcoreapp2.1\CalculatorUsingRemoteDocker.AssemblyInfo.cs
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\bin\Debug\netcoreapp2.1\DockerRemoteTest.deps.json
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\bin\Debug\netcoreapp2.1\DockerRemoteTest.runtimeconfig.json
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\bin\Debug\netcoreapp2.1\DockerRemoteTest.runtimeconfig.dev.json
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\bin\Debug\netcoreapp2.1\DockerRemoteTest.dll
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\bin\Debug\netcoreapp2.1\DockerRemoteTest.pdb
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\obj\Debug\netcoreapp2.1\DockerRemoteTest.dll
+E:\Personal\Workspace\Docker\CalculatorUsingRemoteDocker\CalculatorUsingRemoteDocker\obj\Debug\netcoreapp2.1\DockerRemoteTest.pdb
