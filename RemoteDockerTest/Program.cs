@@ -11,6 +11,7 @@ namespace RemoteDockerTest
             
             DockerAccess dockerAccess = new DockerAccess();
             dynamic n = 0;
+            string containerId=null;
 
             do
             {
@@ -28,10 +29,14 @@ namespace RemoteDockerTest
                         dockerAccess.ListContainers();
                         break;
                     case 3:
-                        dockerAccess.StartContainer("955e3716d1e3");
+                        Console.WriteLine("Container ID: ");
+                        containerId = Console.ReadLine();
+                        dockerAccess.StartContainer(containerId);
                         break;
                     case 4:
-                        dockerAccess.StopContainer("955e3716d1e3");
+                        Console.WriteLine("Container ID: ");
+                        containerId = Console.ReadLine();
+                        dockerAccess.StopContainer(containerId);
                         break;
 
                     default:n = 0;

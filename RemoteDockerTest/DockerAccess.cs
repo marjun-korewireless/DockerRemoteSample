@@ -33,6 +33,7 @@ namespace RemoteDockerTest
 
         public async void StopContainer(string containerId)
         {
+            try {
             var stopped = await client.Containers.StopContainerAsync(
             containerId,
             new ContainerStopParameters
@@ -40,6 +41,10 @@ namespace RemoteDockerTest
                  WaitBeforeKillSeconds = 30
             },
             CancellationToken.None);
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         public void StartContainer(string containerId)
         {

@@ -1,0 +1,53 @@
+REPOSITORY                       TAG                                      IMAGE ID            CREATED             SIZE
+
+jesmis                           latest                                   e6dff483ad9d        25 hours ago        508MB
+
+sample                           latest                                   4a334fd1c194        2 days ago          505MB
+
+dotnetcoreapp                    dev                                      6e2a5b81e9b0        5 days ago          503MB
+
+iis-set                          latest                                   9dcfdf66989d        6 days ago          5.69GB
+
+iis-site                         latest                                   9dcfdf66989d        6 days ago          5.69GB
+
+dockertest                       latest                                   1f6465cc05f4        8 days ago          504MB
+
+myapp                            1.0                                      56faebf5372d        8 days ago          507MB
+
+myapp                            latest                                   7c76da9ccec2        8 days ago          504MB
+
+messagestreamserviceexampleapp   latest                                   b39f78fe8192        8 days ago          506MB
+
+microsoft/dotnet                 2.1-sdk-nanoserver-1803                  0e7800824605        11 days ago         1.77GB
+
+microsoft/dotnet                 sdk                                      0e7800824605        11 days ago         1.77GB
+
+microsoft/dotnet                 2.1-aspnetcore-runtime-nanoserver-1803   2a4d05390be7        11 days ago         503MB
+
+microsoft/dotnet                 aspnetcore-runtime                       2a4d05390be7        11 days ago         503MB
+
+microsoft/dotnet-framework       latest                                   8a8d41db81f2        2 weeks ago         4.96GB
+
+microsoft/iis                    latest                                   4e74dc5924ad        2 weeks ago         5.23GB
+
+onlinestore                      dev                                      c9ce75152c35        2 weeks ago         4.93GB
+
+messagestream_service_1          latest                                   fc4ae2371ff1        2 weeks ago         1.8GB
+
+calculator                       latest                                   cb670f80444d        4 weeks ago         400MB
+
+mgarjun/calculator-consoleapp    latest                                   07f3907a5ca6        4 weeks ago         400MB
+
+microsoft/dotnet                 2.1-sdk                                  f4bc69f831aa        6 weeks ago         1.76GB
+
+microsoft/dotnet                 2.1-aspnetcore-runtime                   f8297fe48f0c        6 weeks ago         503MB
+
+microsoft/aspnet                 4.7.2-windowsservercore-1803             cbdbd42e5a14        7 weeks ago         5.46GB
+
+microsoft/aspnet                 latest                                   cbdbd42e5a14        7 weeks ago         5.46GB
+
+microsoft/dotnet-framework       4.7.2-runtime-windowsservercore-1803     0701000e6468        7 weeks ago         4.93GB
+
+hello-world                      latest                                   abe16c070a65        2 months ago        349MB
+
+microsoft/dotnet                 2.1.0-runtime-nanoserver-1709            d921d76ab352        5 months ago        400MB
