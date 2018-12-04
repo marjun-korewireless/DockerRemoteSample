@@ -4,15 +4,38 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+
 
 namespace DockerAccess
 {
     public class DockerOperations
     {
-        //mpull an image
+        //list containers
+        public string[] ListContainers()
+        {
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerListContainers.bat");//@"..\..\DockerAccess\
+            Task<string>[] result = CreateProcess(processInfo);
+            return new string[] { result[0].Result, result[1].Result };
+        }
+
+        //list images
+        public string[] ListImages()
+        {
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerListImages.bat");
+            Task<string>[] result = CreateProcess(processInfo);
+            return new string[] { result[0].Result, result[1].Result };
+        }
+        //pull an image
         public string[] PullImage(string imageName)
         {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerPull.bat", imageName);
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerPull.bat", imageName);
             Task<string>[] result = CreateProcess(processInfo);
             return new string[] { result[0].Result, result[1].Result };
         }
@@ -20,7 +43,8 @@ namespace DockerAccess
         //run a container from an image without port mapping
         public string[] RunContainer(string imageName)
         {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerRun.bat", imageName);
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerRun.bat", imageName);
             Task<string>[] result = CreateProcess(processInfo);
             return new string[] { result[0].Result, result[1].Result };
         }
@@ -28,43 +52,42 @@ namespace DockerAccess
         //run a container froman image with port mapping
         public string[] RunContainer(string imageName, int hostPort, int containerPort)
         {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerRun.bat", imageName + " " + hostPort + " " + containerPort);
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerRun.bat", imageName + " " + hostPort + " " + containerPort);
             Task<string>[] result = CreateProcess(processInfo);
-            return new string[] { null/*result[0].Result*/,null /*result[1].Result*/ };
+            return new string[] { result[0].Result,result[1].Result };
         }
 
-        //list containers
-        public string[] ListContainers()
-        {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerListContainers.bat");
-            Task<string>[] result = CreateProcess(processInfo);
-            return new string[] { result[0].Result,result[1].Result};
-        }
 
-        //list images
-        public string[] ListImages()
+        //Remove a container forcefully
+        public string[] RemoveContainer(string containerId)
         {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerListImages.bat");
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerRemoveContainer.bat", containerId);
             Task<string>[] result = CreateProcess(processInfo);
             return new string[] { result[0].Result, result[1].Result };
         }
 
+
+
         //Start a container
         public string[] StartContainer(string containerId)
         {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerStartContainer.bat",containerId);
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerStartContainer.bat", containerId);
             Task<string>[] result = CreateProcess(processInfo);
             return new string[] { result[0].Result, result[1].Result };
         }
         public string[] StopContainer(string containerId)
         {
-            var processInfo = new ProcessStartInfo(@"..\..\..\DockerAccess\dockerStopContainer.bat",containerId);
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerStopContainer.bat", containerId);
             Task<string>[] result = CreateProcess(processInfo);
             return new string[] { result[0].Result, result[1].Result };
         }
         //sub-funcion to create a process and start it up
         Task<string>[] CreateProcess(ProcessStartInfo processInfo)
-        {   
+        {
             Task<string> output = null;
             Task<string> error = null;
             processInfo.CreateNoWindow = true;
