@@ -104,10 +104,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DockerAccess\DockerAccess.csproj">
-      <Project>{8eebeb4f-f8db-4369-b43b-c5ea9ae68d8a}</Project>
-      <Name>DockerAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DockerApi\DockerApi.csproj">
       <Project>{9ead4e9d-1785-45c3-a5b7-0bbb6de679a6}</Project>
       <Name>DockerApi</Name>

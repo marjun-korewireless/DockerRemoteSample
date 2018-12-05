@@ -3351,11 +3351,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Personal\\Workspace\\Docker\\DockerRemoteSample\\RemoteDockerTest\\RemoteDockerTest.csproj",
+      "projectUniqueName": "E:\\Personal\\Workspace\\Docker\\temp\\RemoteDockerTest\\RemoteDockerTest.csproj",
       "projectName": "DockerRemoteTest",
-      "projectPath": "E:\\Personal\\Workspace\\Docker\\DockerRemoteSample\\RemoteDockerTest\\RemoteDockerTest.csproj",
+      "projectPath": "E:\\Personal\\Workspace\\Docker\\temp\\RemoteDockerTest\\RemoteDockerTest.csproj",
       "packagesPath": "C:\\Users\\marjun\\.nuget\\packages\\",
-      "outputPath": "E:\\Personal\\Workspace\\Docker\\DockerRemoteSample\\RemoteDockerTest\\obj\\",
+      "outputPath": "E:\\Personal\\Workspace\\Docker\\temp\\RemoteDockerTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

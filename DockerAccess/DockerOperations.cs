@@ -68,6 +68,15 @@ namespace DockerAccess
             return new string[] { result[0].Result, result[1].Result };
         }
 
+        //Remove an image forcefully
+        public string[] RemoveImage(string imageName)
+        {
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+            var processInfo = new ProcessStartInfo(path + @"..\DockerAccess\dockerRemoveImage.bat", imageName);
+            Task<string>[] result = CreateProcess(processInfo);
+            return new string[] { result[0].Result, result[1].Result };
+        }
+
 
 
         //Start a container

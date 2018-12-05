@@ -106,6 +106,17 @@ namespace DockerApi.Controllers
             return dockerResponse;
         }
 
+        //   api/docker/removeimage
+        [HttpPost]
+        public DockerResponse RemoveImage(DockerItem image)
+        {
+            var dockerResponse = new DockerResponse
+            {
+                output = dockerOperations.RemoveImage(image.imageName)
+            };
+            return dockerResponse;
+        }
+
 
 
         //[HttpGet]

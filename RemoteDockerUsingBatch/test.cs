@@ -1,5 +1,4 @@
 ﻿using System;
-using DockerAccess;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +25,7 @@ namespace RemoteDockerUsingBatch
         {
             BaseAddress = new Uri("http://localhost:61090/")
         };
+        DockerResponse dockerResponse = new DockerResponse();
 
         private async void btnPull_Click(object sender, EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace RemoteDockerUsingBatch
             {
                 imageName = txtImageName.Text
             };
-            DockerResponse dockerResponse = new DockerResponse();
+            
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -45,21 +45,13 @@ namespace RemoteDockerUsingBatch
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
             lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
-            //Change to Api call
-            //DockerOperations dockerOperations = new DockerOperations();
-            //string[] Result = dockerOperations.PullImage(txtImageName.Text);
-
-            //lblOutput.Text = Result[0];
-            //lblOutput.Text += Result[1];
         }
 
         private async void btnRunImage_Click(object sender, EventArgs e)
         {
             lblOutput.Text = "Loading...";
             lblOutputHeader.Text = "Running container using " + txtImageToRun.Text;
-
-
-            DockerResponse dockerResponse = new DockerResponse();
+            
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -80,30 +72,10 @@ namespace RemoteDockerUsingBatch
                 container.containerPort = Convert.ToInt32(txtContPort.Text);
                 response = await client.PostAsJsonAsync("api/docker/runcontainerwithport", container);
             }
-
             response.EnsureSuccessStatusCode();
-
-            //lblOutput.Text = response.Content.ReadAsStringAsync().Result;
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
             lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
 
-            //DockerOperations dockerOperations = new DockerOperations();
-            //string[] result = null;
-            //if (txtContPort.Text == "" || txtHostPort.Text == "")
-            //{
-            //    string imageName = txtImageToRun.Text;
-            //    result = dockerOperations.RunContainer(imageName);
-            //}
-            //else
-            //{
-            //    int hostPort = Convert.ToInt32(txtHostPort.Text);
-            //    int containerPort = Convert.ToInt32(txtContPort.Text);
-            //    string imageName = txtImageToRun.Text;
-            //    result = dockerOperations.RunContainer(imageName, hostPort, containerPort);
-            //}
-
-
-            //lblOutput.Text = result[0] + result[1];
             txtImageToRun.Text = null;
             txtContPort.Text = null;
             txtHostPort.Text = null;
@@ -113,37 +85,16 @@ namespace RemoteDockerUsingBatch
         {
             lblOutput.Text = "Loading...";
             lblOutputHeader.Text = "listing Containers";
+
             DockerItem container = new DockerItem();
-            DockerResponse dockerResponse = new DockerResponse();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = await client.PostAsJsonAsync("api/docker/listcontainers", container);
             response.EnsureSuccessStatusCode();
 
-            //lblOutput.Text = response.Content.ReadAsStringAsync().Result;
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
             lblOutput.Text = dockerResponse.output[0]+dockerResponse.output[1];
-
-            //DockerOperations dockerOperations = new DockerOperations();
-            //string[] result = dockerOperations.ListContainers();
-            //lblOutput.Text = result[0] + result[1];
-            //using (var client = new HttpClient())
-            //{
-
-            //    client.BaseAddress = new Uri("http://localhost:61090/");
-            //    var response = client.PostAsync("api/listcontainers",null);
-
-            //    if (response.IsCompleted)
-            //    {
-            //        lblOutput.Text = response.ToString();
-            //    }
-            //    if (response.IsCanceled)
-            //    {
-            //        lblOutput.Text = response.IsCanceled.ToString();
-            //    }
-            //}
-
         }
 
         private async void btnListImages_Click(object sender, EventArgs e)
@@ -152,7 +103,6 @@ namespace RemoteDockerUsingBatch
             lblOutputHeader.Text = "Listing Images";
 
             DockerItem image = new DockerItem();
-            DockerResponse dockerResponse = new DockerResponse();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -172,7 +122,6 @@ namespace RemoteDockerUsingBatch
             {
                 containerId=txtStartContainerId.Text
             };
-            DockerResponse dockerResponse = new DockerResponse();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -181,9 +130,6 @@ namespace RemoteDockerUsingBatch
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
             lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
-            //DockerOperations dockerOperations = new DockerOperations();
-            //string[] result = dockerOperations.StartContainer(txtStartContainerId.Text);
-            //lblOutput.Text = result[0] + result[1];
         }
 
         private async void btnStopContainer_Click(object sender, EventArgs e)
@@ -195,7 +141,6 @@ namespace RemoteDockerUsingBatch
             {
                 containerId = txtStopContainerId.Text
             };
-            DockerResponse dockerResponse = new DockerResponse();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -204,11 +149,6 @@ namespace RemoteDockerUsingBatch
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
             lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
-            //DockerOperations dockerOperations = new DockerOperations();
-            //string[] result = dockerOperations.StopContainer(txtStopContainerId.Text);
-            //lblOutput.Text = result[0] + result[1];
-
-
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -219,13 +159,12 @@ namespace RemoteDockerUsingBatch
         private async void btnRemoveContainer_Click(object sender, EventArgs e)
         {
             lblOutput.Text = "Loading...";
-            lblOutputHeader.Text = "Stopping container";
+            lblOutputHeader.Text = "Removing container";
 
             DockerItem container = new DockerItem()
             {
                 containerId = txtRemoveContainerId.Text
             };
-            DockerResponse dockerResponse = new DockerResponse();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -234,6 +173,25 @@ namespace RemoteDockerUsingBatch
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
             lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            lblOutput.Text = "Loading...";
+            lblOutputHeader.Text = "Removing Image ";
+            DockerItem image = new DockerItem()
+            {
+                imageName = txtRemoveImage.Text
+            };
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/docker/removeimage",image);
+            response.EnsureSuccessStatusCode();
+
+            dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
+            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+
         }
     }
     public class DockerItem

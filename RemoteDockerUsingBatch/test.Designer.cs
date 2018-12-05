@@ -57,6 +57,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnRemoveContainer = new System.Windows.Forms.Button();
             this.txtRemoveContainerId = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtRemoveImage = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnlOutput.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -310,7 +314,7 @@
             this.btnRemoveContainer.Name = "btnRemoveContainer";
             this.btnRemoveContainer.Size = new System.Drawing.Size(75, 29);
             this.btnRemoveContainer.TabIndex = 30;
-            this.btnRemoveContainer.Text = "Stop";
+            this.btnRemoveContainer.Text = "Remove";
             this.btnRemoveContainer.UseVisualStyleBackColor = true;
             this.btnRemoveContainer.Click += new System.EventHandler(this.btnRemoveContainer_Click);
             // 
@@ -321,11 +325,51 @@
             this.txtRemoveContainerId.Size = new System.Drawing.Size(210, 20);
             this.txtRemoveContainerId.TabIndex = 29;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 29);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Remove";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtRemoveImage
+            // 
+            this.txtRemoveImage.Location = new System.Drawing.Point(109, 374);
+            this.txtRemoveImage.Name = "txtRemoveImage";
+            this.txtRemoveImage.Size = new System.Drawing.Size(198, 20);
+            this.txtRemoveImage.TabIndex = 33;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(22, 374);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(84, 13);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Image Id/Name:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(20, 351);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(109, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Remove an Image";
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 496);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtRemoveImage);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.btnRemoveContainer);
             this.Controls.Add(this.txtRemoveContainerId);
             this.Controls.Add(this.label12);
@@ -394,6 +438,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnRemoveContainer;
         private System.Windows.Forms.TextBox txtRemoveContainerId;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtRemoveImage;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }
 

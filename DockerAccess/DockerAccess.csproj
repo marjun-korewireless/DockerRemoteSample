@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="dockerListContainers.bat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

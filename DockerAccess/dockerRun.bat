@@ -1,4 +1,4 @@
-::docker run
+::run a container from an image with or without port mapping
 @echo off
 if [%3] == [] (goto :withoutport) else (goto :withport)
 IF %errorlevel% NEQ 0 (echo "Error") ELSE (echo %errorlevel%)
