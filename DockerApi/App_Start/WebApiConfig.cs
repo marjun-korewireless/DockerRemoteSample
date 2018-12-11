@@ -10,7 +10,7 @@ namespace DockerApi
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "ListContainers",
+                name: "DockerOperations",
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );

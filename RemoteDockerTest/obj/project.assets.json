@@ -768,10 +768,11 @@
   },
   "libraries": {
     "Docker.DotNet/3.125.2": {
-      "sha512": "sc8qmsJ1oVAu0rXBrr+tEtjoPOs15m0OUwrMCMjBmtaBya6SuyEL/A0kAucIsx+mUoNhP0RNgy1Y3noCoZyJ9Q==",
+      "sha512": "Q1HbOwp7l5DNQO4IUOvwVd50cOAIgzmTIt8w7zoZhGefIvDTaGhyEWyvukBAQJFXhn90aEXwDVAXbEyFQpUsGg==",
       "type": "package",
       "path": "docker.dotnet/3.125.2",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "docker.dotnet.3.125.2.nupkg.sha512",
         "docker.dotnet.nuspec",
@@ -1143,10 +1144,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -1326,10 +1328,12 @@
       ]
     },
     "System.Buffers/4.4.0": {
-      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "sha512": "VCJfpWcYG1gT3WwivZWgT0KaqY678MQBvrOI2si6V8GHeQOtuW+wpiv5ss4KyfGG+cFFdPNaI+nw2/kExCtGgQ==",
       "type": "package",
       "path": "system.buffers/4.4.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp2.0/_._",
@@ -3158,10 +3162,11 @@
       ]
     },
     "System.ValueTuple/4.4.0": {
-      "sha512": "6FvjECwwsvwtdnm2uD91MlFEgId6C2SWsdZk23gFpynHQ9x5ruqjsfEadb0VNzpkEHDQ6cq31CXUv3ouT09EHA==",
+      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
       "type": "package",
       "path": "system.valuetuple/4.4.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -3351,11 +3356,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Personal\\Workspace\\Docker\\temp\\RemoteDockerTest\\RemoteDockerTest.csproj",
+      "projectUniqueName": "E:\\Personal\\Workspace\\Docker\\DockerRemoteSample\\RemoteDockerTest\\RemoteDockerTest.csproj",
       "projectName": "DockerRemoteTest",
-      "projectPath": "E:\\Personal\\Workspace\\Docker\\temp\\RemoteDockerTest\\RemoteDockerTest.csproj",
+      "projectPath": "E:\\Personal\\Workspace\\Docker\\DockerRemoteSample\\RemoteDockerTest\\RemoteDockerTest.csproj",
       "packagesPath": "C:\\Users\\marjun\\.nuget\\packages\\",
-      "outputPath": "E:\\Personal\\Workspace\\Docker\\temp\\RemoteDockerTest\\obj\\",
+      "outputPath": "E:\\Personal\\Workspace\\Docker\\DockerRemoteSample\\RemoteDockerTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

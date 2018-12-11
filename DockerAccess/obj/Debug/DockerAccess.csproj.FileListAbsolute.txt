@@ -31,4 +31,5 @@ E:\Personal\Workspace\Docker\DockerRemoteSample\DockerAccess\bin\Debug\System.We
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerAccess\obj\Debug\DockerAccess.csproj.CopyComplete
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerAccess\obj\Debug\DockerAccess.Properties.Resources.resources
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerAccess\obj\Debug\DockerAccess.csproj.GenerateResource.cache
+E:\Personal\Workspace\Docker\DockerRemoteSample\DockerAccess\bin\Debug\System.Management.Automation.dll
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerAccess\obj\Debug\DockerAccess.csprojAssemblyReference.cache

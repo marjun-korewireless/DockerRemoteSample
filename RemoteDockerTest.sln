@@ -11,14 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerApi", "DockerApi\Dock
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{994CEB28-CD7C-41C7-B16B-3A2E4F03EB59}"
 	ProjectSection(SolutionItems) = preProject
-		DockerAccess\dockerListContainers.bat = DockerAccess\dockerListContainers.bat
-		DockerAccess\dockerListImages.bat = DockerAccess\dockerListImages.bat
-		DockerAccess\dockerPull.bat = DockerAccess\dockerPull.bat
-		DockerAccess\dockerRemoveContainer.bat = DockerAccess\dockerRemoveContainer.bat
-		DockerAccess\dockerRemoveImage.bat = DockerAccess\dockerRemoveImage.bat
-		DockerAccess\dockerRun.bat = DockerAccess\dockerRun.bat
-		DockerAccess\dockerStartContainer.bat = DockerAccess\dockerStartContainer.bat
-		DockerAccess\dockerStopContainer.bat = DockerAccess\dockerStopContainer.bat
+		DockerAccess\PsScripts\dockerListContainers.ps1 = DockerAccess\PsScripts\dockerListContainers.ps1
+		DockerAccess\PsScripts\dockerListImages.ps1 = DockerAccess\PsScripts\dockerListImages.ps1
+		DockerAccess\PsScripts\dockerPull.ps1 = DockerAccess\PsScripts\dockerPull.ps1
+		DockerAccess\PsScripts\dockerRemoveContainer.ps1 = DockerAccess\PsScripts\dockerRemoveContainer.ps1
+		DockerAccess\PsScripts\dockerRemoveImage.ps1 = DockerAccess\PsScripts\dockerRemoveImage.ps1
+		DockerAccess\PsScripts\dockerRun.ps1 = DockerAccess\PsScripts\dockerRun.ps1
+		DockerAccess\PsScripts\dockerRunWithPort.ps1 = DockerAccess\PsScripts\dockerRunWithPort.ps1
+		DockerAccess\PsScripts\dockerStartContainer.ps1 = DockerAccess\PsScripts\dockerStartContainer.ps1
+		DockerAccess\PsScripts\dockerStopContainer.ps1 = DockerAccess\PsScripts\dockerStopContainer.ps1
 	EndProjectSection
 EndProject
 Global

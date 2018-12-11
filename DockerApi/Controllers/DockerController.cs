@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using DockerAccess;
+using System.Collections.ObjectModel;
+using System.Management.Automation;
 
 namespace DockerApi.Controllers
 {
@@ -20,6 +22,7 @@ namespace DockerApi.Controllers
                 output = dockerOperations.ListContainers()
             };
             return dockerResponse;
+
         }
 
         //List images
@@ -65,7 +68,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.RunContainer(container.imageName,container.hostPort,container.containerPort)
+                output = dockerOperations.RunContainerWithPort(container.imageName,container.hostPort,container.containerPort)
             };
             return dockerResponse;
         }
@@ -135,6 +138,6 @@ namespace DockerApi.Controllers
     }
     public class DockerResponse
     {
-        public string[] output;
+        public IEnumerable<string> output;
     }
 }

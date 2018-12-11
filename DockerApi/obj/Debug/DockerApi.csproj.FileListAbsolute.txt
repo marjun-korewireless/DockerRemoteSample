@@ -97,3 +97,8 @@ E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\roslyn\vbc.exe.con
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\roslyn\vbc.rsp
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\roslyn\VBCSCompiler.exe
 E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\roslyn\VBCSCompiler.exe.config
+E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\System.Net.Http.dll
+E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\System.Security.Cryptography.Algorithms.dll
+E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\System.Security.Cryptography.Encoding.dll
+E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\System.Security.Cryptography.Primitives.dll
+E:\Personal\Workspace\Docker\DockerRemoteSample\DockerApi\bin\System.Security.Cryptography.X509Certificates.dll

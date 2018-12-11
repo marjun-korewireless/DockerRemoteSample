@@ -1,0 +1,11 @@
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\bin\Debug\TestConsole.exe.config
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\bin\Debug\TestConsole.exe
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\bin\Debug\TestConsole.pdb
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\bin\Debug\DockerAccess.dll
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\bin\Debug\DockerAccess.pdb
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\bin\Debug\DockerAccess.dll.config
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\obj\Debug\TestConsole.csprojAssemblyReference.cache
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\obj\Debug\TestConsole.csproj.CoreCompileInputs.cache
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\obj\Debug\TestConsole.csproj.CopyComplete
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\obj\Debug\TestConsole.exe
+E:\Personal\Workspace\Docker\DockerRemoteSample\TestConsole\obj\Debug\TestConsole.pdb

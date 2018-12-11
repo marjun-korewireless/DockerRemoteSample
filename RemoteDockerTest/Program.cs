@@ -18,7 +18,8 @@ namespace RemoteDockerTest
                 Console.WriteLine("1.List images\n" +
                     "2.List Containers\n" +
                     "3.Start a container\n" +
-                    "4.Stop a container");
+                    "4.Stop a container\n" +
+                    "5.Run a container");
                 n =Convert.ToInt32(Console.ReadLine());
                 switch (n)
                 {
@@ -37,6 +38,11 @@ namespace RemoteDockerTest
                         Console.WriteLine("Container ID: ");
                         containerId = Console.ReadLine();
                         dockerAccess.StopContainer(containerId);
+                        break;
+                    case 5:
+                        Console.WriteLine("image name: ");
+                        containerId = Console.ReadLine();
+                        dockerAccess.RunContainer(containerId);
                         break;
 
                     default:n = 0;

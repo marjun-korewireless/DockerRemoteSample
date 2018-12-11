@@ -346,7 +346,7 @@
     "Docker.DotNet/3.125.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sc8qmsJ1oVAu0rXBrr+tEtjoPOs15m0OUwrMCMjBmtaBya6SuyEL/A0kAucIsx+mUoNhP0RNgy1Y3noCoZyJ9Q==",
+      "sha512": "sha512-Q1HbOwp7l5DNQO4IUOvwVd50cOAIgzmTIt8w7zoZhGefIvDTaGhyEWyvukBAQJFXhn90aEXwDVAXbEyFQpUsGg==",
       "path": "docker.dotnet/3.125.2",
       "hashPath": "docker.dotnet.3.125.2.nupkg.sha512"
     },
@@ -367,7 +367,7 @@
     "System.Buffers/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "sha512": "sha512-VCJfpWcYG1gT3WwivZWgT0KaqY678MQBvrOI2si6V8GHeQOtuW+wpiv5ss4KyfGG+cFFdPNaI+nw2/kExCtGgQ==",
       "path": "system.buffers/4.4.0",
       "hashPath": "system.buffers.4.4.0.nupkg.sha512"
     },
@@ -584,7 +584,7 @@
     "System.ValueTuple/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6FvjECwwsvwtdnm2uD91MlFEgId6C2SWsdZk23gFpynHQ9x5ruqjsfEadb0VNzpkEHDQ6cq31CXUv3ouT09EHA==",
+      "sha512": "sha512-BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
       "path": "system.valuetuple/4.4.0",
       "hashPath": "system.valuetuple.4.4.0.nupkg.sha512"
     },

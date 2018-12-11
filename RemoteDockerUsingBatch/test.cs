@@ -29,7 +29,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnPull_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Pulling image " + txtImageName.Text;
 
             DockerItem image = new DockerItem()
@@ -42,14 +42,16 @@ namespace RemoteDockerUsingBatch
                 new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = await client.PostAsJsonAsync("api/docker/pullimage", image);
             response.EnsureSuccessStatusCode();
-
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
         }
 
         private async void btnRunImage_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Running container using " + txtImageToRun.Text;
             
             client.DefaultRequestHeaders.Accept.Clear();
@@ -74,7 +76,10 @@ namespace RemoteDockerUsingBatch
             }
             response.EnsureSuccessStatusCode();
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
 
             txtImageToRun.Text = null;
             txtContPort.Text = null;
@@ -83,7 +88,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnListContainers_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "listing Containers";
 
             DockerItem container = new DockerItem();
@@ -94,12 +99,15 @@ namespace RemoteDockerUsingBatch
             response.EnsureSuccessStatusCode();
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0]+dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
         }
 
         private async void btnListImages_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Listing Images";
 
             DockerItem image = new DockerItem();
@@ -110,12 +118,15 @@ namespace RemoteDockerUsingBatch
             response.EnsureSuccessStatusCode();
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
         }
 
         private async void btnStartContainer_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Starting container";
 
             DockerItem container = new DockerItem()
@@ -129,12 +140,15 @@ namespace RemoteDockerUsingBatch
             response.EnsureSuccessStatusCode();
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
         }
 
         private async void btnStopContainer_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Stopping container";
 
             DockerItem container = new DockerItem()
@@ -148,7 +162,10 @@ namespace RemoteDockerUsingBatch
             response.EnsureSuccessStatusCode();
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -158,7 +175,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnRemoveContainer_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Removing container";
 
             DockerItem container = new DockerItem()
@@ -172,12 +189,15 @@ namespace RemoteDockerUsingBatch
             response.EnsureSuccessStatusCode();
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...";
+            lblOutput.Text = "Loading...\n";
             lblOutputHeader.Text = "Removing Image ";
             DockerItem image = new DockerItem()
             {
@@ -190,7 +210,10 @@ namespace RemoteDockerUsingBatch
             response.EnsureSuccessStatusCode();
 
             dockerResponse = JsonConvert.DeserializeObject<DockerResponse>(response.Content.ReadAsStringAsync().Result);
-            lblOutput.Text = dockerResponse.output[0] + dockerResponse.output[1];
+            foreach (var line in dockerResponse.output)
+            {
+                lblOutput.Text += line + "\n";
+            }
 
         }
     }
