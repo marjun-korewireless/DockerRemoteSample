@@ -30,7 +30,6 @@ E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug\DockerAccess.dll
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug\DockerAccess.pdb
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\obj\Debug\RemoteDockerUsingBatch.csprojAssemblyReference.cache
-E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\obj\Debug\RemoteDockerUsingBatch.test.resources
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\obj\Debug\RemoteDockerUsingBatch.Properties.Resources.resources
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\obj\Debug\RemoteDockerUsingBatch.csproj.GenerateResource.cache
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\obj\Debug\RemoteDockerUsingBatch.csproj.CoreCompileInputs.cache
@@ -65,3 +64,4 @@ E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug\Newtonsoft.Json.dll
 E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\bin\Debug\Newtonsoft.Json.xml
+E:\Personal\Workspace\Docker\DockerRemoteSample\RemoteDockerUsingBatch\obj\Debug\RemoteDockerUsingBatch.OperationsUI.resources

@@ -15,9 +15,9 @@ namespace DockerAccess
 {
     public class DockerOperations
     {
-        private static string userName = @"userName";        //Enter username here
-        private static string password = "password";         //Enter password here
-        private static string computerName = "IpAddressOrCompName"; //Enter Ip Address or Computer Name
+        private static string userName = @"KORE-CORP\pkaratha";        //Enter username here
+        private static string password = "qwerty1234!";         //Enter password here
+        private static string computerName = "192.168.64.183"; //Enter Ip Address or Computer Name
 
         #region ListContainers
         //List Containers

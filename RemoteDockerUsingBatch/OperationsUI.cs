@@ -15,9 +15,9 @@ using Newtonsoft.Json;
 
 namespace RemoteDockerUsingBatch
 {
-    public partial class test : Form
+    public partial class OperationsUI : Form
     {
-        public test()
+        public OperationsUI()
         {
             InitializeComponent();
         }
@@ -26,10 +26,10 @@ namespace RemoteDockerUsingBatch
             BaseAddress = new Uri("http://localhost:61090/")
         };
         DockerResponse dockerResponse = new DockerResponse();
-
+        
         private async void btnPull_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Pulling image " + txtImageName.Text;
 
             DockerItem image = new DockerItem()
@@ -51,7 +51,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnRunImage_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Running container using " + txtImageToRun.Text;
             
             client.DefaultRequestHeaders.Accept.Clear();
@@ -88,7 +88,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnListContainers_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "listing Containers";
 
             DockerItem container = new DockerItem();
@@ -107,7 +107,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnListImages_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Listing Images";
 
             DockerItem image = new DockerItem();
@@ -126,7 +126,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnStartContainer_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Starting container";
 
             DockerItem container = new DockerItem()
@@ -148,7 +148,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnStopContainer_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Stopping container";
 
             DockerItem container = new DockerItem()
@@ -175,7 +175,7 @@ namespace RemoteDockerUsingBatch
 
         private async void btnRemoveContainer_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Removing container";
 
             DockerItem container = new DockerItem()
@@ -197,7 +197,7 @@ namespace RemoteDockerUsingBatch
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            lblOutput.Text = "Loading...\n";
+            lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Removing Image ";
             DockerItem image = new DockerItem()
             {
@@ -214,6 +214,11 @@ namespace RemoteDockerUsingBatch
             {
                 lblOutput.Text += line + "\n";
             }
+
+        }
+
+        private void test_Load(object sender, EventArgs e)
+        {
 
         }
     }

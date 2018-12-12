@@ -1,6 +1,6 @@
 ﻿namespace RemoteDockerUsingBatch
 {
-    partial class test
+    partial class OperationsUI
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,6 @@
             this.btnPull = new System.Windows.Forms.Button();
             this.txtImageName = new System.Windows.Forms.TextBox();
             this.lblOutput = new System.Windows.Forms.Label();
-            this.pnlOutput = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtImageToRun = new System.Windows.Forms.TextBox();
@@ -61,7 +60,6 @@
             this.txtRemoveImage = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pnlOutput.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPull
@@ -84,21 +82,11 @@
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(12, 12);
+            this.lblOutput.Location = new System.Drawing.Point(414, 94);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(9, 13);
             this.lblOutput.TabIndex = 2;
             this.lblOutput.Text = "|";
-            // 
-            // pnlOutput
-            // 
-            this.pnlOutput.AutoSize = true;
-            this.pnlOutput.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlOutput.Controls.Add(this.lblOutput);
-            this.pnlOutput.Location = new System.Drawing.Point(405, 74);
-            this.pnlOutput.Name = "pnlOutput";
-            this.pnlOutput.Size = new System.Drawing.Size(24, 25);
-            this.pnlOutput.TabIndex = 3;
             // 
             // label1
             // 
@@ -366,6 +354,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 496);
+            this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRemoveImage);
             this.Controls.Add(this.label13);
@@ -395,13 +384,11 @@
             this.Controls.Add(this.txtImageToRun);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pnlOutput);
             this.Controls.Add(this.txtImageName);
             this.Controls.Add(this.btnPull);
             this.Name = "test";
             this.Text = "test";
-            this.pnlOutput.ResumeLayout(false);
-            this.pnlOutput.PerformLayout();
+            this.Load += new System.EventHandler(this.test_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,7 +399,6 @@
         private System.Windows.Forms.Button btnPull;
         private System.Windows.Forms.TextBox txtImageName;
         private System.Windows.Forms.Label lblOutput;
-        private System.Windows.Forms.Panel pnlOutput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtImageToRun;
