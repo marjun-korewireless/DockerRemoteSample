@@ -12,14 +12,14 @@ namespace DockerApi.Controllers
     public class DockerController : ApiController
     {
         DockerOperations dockerOperations = new DockerOperations();
-
+        #region usingPsScripts
         //List Containers
         [HttpPost]
-        public DockerResponse ListContainers()
+        public DockerResponse ListContainers(DockerItem dockerItem)
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.ListContainers()
+                output = dockerOperations.ListContainers(dockerItem.isUsingBatch)
             };
             return dockerResponse;
 
@@ -27,11 +27,11 @@ namespace DockerApi.Controllers
 
         //List images
         [HttpPost]
-        public DockerResponse ListImages()
+        public DockerResponse ListImages(DockerItem dockerItem)
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.ListImages()
+                output = dockerOperations.ListImages(dockerItem.isUsingBatch)
             };
             return dockerResponse;
         }
@@ -43,7 +43,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.PullImage(image.imageName)
+                output = dockerOperations.PullImage(image.isUsingBatch, image.imageName)
             };
             return dockerResponse;
         }
@@ -56,7 +56,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.RunContainer(image.imageName)
+                output = dockerOperations.RunContainer(image.isUsingBatch, image.imageName)
             };
             return dockerResponse;
         }
@@ -68,7 +68,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.RunContainerWithPort(container.imageName,container.hostPort,container.containerPort)
+                output = dockerOperations.RunContainerWithPort(container.isUsingBatch, container.imageName,container.hostPort,container.containerPort)
             };
             return dockerResponse;
         }
@@ -80,7 +80,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.StartContainer(container.containerId)
+                output = dockerOperations.StartContainer(container.isUsingBatch, container.containerId)
             };
             return dockerResponse;
         }
@@ -92,7 +92,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.StopContainer(container.containerId)
+                output = dockerOperations.StopContainer(container.isUsingBatch, container.containerId)
             };
             return dockerResponse;
         }
@@ -104,7 +104,7 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.RemoveContainer(container.containerId)
+                output = dockerOperations.RemoveContainer(container.isUsingBatch, container.containerId)
             };
             return dockerResponse;
         }
@@ -115,21 +115,125 @@ namespace DockerApi.Controllers
         {
             var dockerResponse = new DockerResponse
             {
-                output = dockerOperations.RemoveImage(image.imageName)
+                output = dockerOperations.RemoveImage(image.isUsingBatch, image.imageName)
             };
             return dockerResponse;
         }
+        #endregion usingPsScripts
 
-
-
-        //[HttpGet]
-        //public string Get(int id)
+        //#region usingBatchScripts
+        ////List Containers
+        //[HttpPost]
+        //public DockerResponse ListContainersBatch()
         //{
-        //    return "Working";
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.ListContainers()
+        //    };
+        //    return dockerResponse;
+
         //}
+
+        ////List images
+        //[HttpPost]
+        //public DockerResponse ListImagesBatch()
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.ListImages()
+        //    };
+        //    return dockerResponse;
+        //}
+
+
+        ////   api/docker/pullimage
+        //[HttpPost]
+        //public DockerResponse PullImageBatch(DockerItem image)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.PullImage(image.imageName)
+        //    };
+        //    return dockerResponse;
+        //}
+
+
+
+        ////  api/docker/runcontainer
+        //[HttpPost]
+        //public DockerResponse RunContainerBatch(DockerItem image)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.RunContainer(image.imageName)
+        //    };
+        //    return dockerResponse;
+        //}
+
+
+        ////   api/docker/runcontainerwithport
+        //[HttpPost]
+        //public DockerResponse RunContainerWithPortBatch(DockerItem container)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.RunContainerWithPort(container.imageName, container.hostPort, container.containerPort)
+        //    };
+        //    return dockerResponse;
+        //}
+
+
+        ////   api/docker/startcontainer
+        //[HttpPost]
+        //public DockerResponse StartContainerBatch(DockerItem container)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.StartContainer(container.containerId)
+        //    };
+        //    return dockerResponse;
+        //}
+
+
+        ////   api/docker/stopcontainer
+        //[HttpPost]
+        //public DockerResponse StopContainerBatch(DockerItem container)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.StopContainer(container.containerId)
+        //    };
+        //    return dockerResponse;
+        //}
+
+
+        ////   api/docker/removecontainer
+        //[HttpPost]
+        //public DockerResponse RemoveContainerBatch(DockerItem container)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.RemoveContainer(container.containerId)
+        //    };
+        //    return dockerResponse;
+        //}
+
+        ////   api/docker/removeimage
+        //[HttpPost]
+        //public DockerResponse RemoveImageBatch(DockerItem image)
+        //{
+        //    var dockerResponse = new DockerResponse
+        //    {
+        //        output = dockerOperations.RemoveImage(image.imageName)
+        //    };
+        //    return dockerResponse;
+        //}
+        //#endregion usingBatchScripts
+
     }
     public class DockerItem
     {
+        public bool isUsingBatch;
         public string imageName;
         public string containerName;
         public string containerId;

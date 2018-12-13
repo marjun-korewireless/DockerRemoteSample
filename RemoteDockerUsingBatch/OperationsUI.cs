@@ -34,7 +34,9 @@ namespace RemoteDockerUsingBatch
 
             DockerItem image = new DockerItem()
             {
-                imageName = txtImageName.Text
+                imageName = txtImageName.Text,
+                isUsingBatch = rdBtnBatch.Checked
+
             };
             
             client.DefaultRequestHeaders.Accept.Clear();
@@ -60,7 +62,8 @@ namespace RemoteDockerUsingBatch
 
             DockerItem container = new DockerItem()
             {
-                imageName = txtImageToRun.Text
+                imageName = txtImageToRun.Text,
+                isUsingBatch = rdBtnBatch.Checked
             };
             HttpResponseMessage response;
 
@@ -91,7 +94,10 @@ namespace RemoteDockerUsingBatch
             lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "listing Containers";
 
-            DockerItem container = new DockerItem();
+            DockerItem container = new DockerItem()
+            {
+                isUsingBatch=rdBtnBatch.Checked
+            };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -110,7 +116,10 @@ namespace RemoteDockerUsingBatch
             lblOutput.Text = "Output will load here...\n";
             lblOutputHeader.Text = "Listing Images";
 
-            DockerItem image = new DockerItem();
+            DockerItem image = new DockerItem()
+            {
+                isUsingBatch = rdBtnBatch.Checked
+            };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -131,7 +140,8 @@ namespace RemoteDockerUsingBatch
 
             DockerItem container = new DockerItem()
             {
-                containerId=txtStartContainerId.Text
+                containerId=txtStartContainerId.Text,
+                isUsingBatch = rdBtnBatch.Checked
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -153,7 +163,8 @@ namespace RemoteDockerUsingBatch
 
             DockerItem container = new DockerItem()
             {
-                containerId = txtStopContainerId.Text
+                containerId = txtStopContainerId.Text,
+                isUsingBatch = rdBtnBatch.Checked
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -180,7 +191,8 @@ namespace RemoteDockerUsingBatch
 
             DockerItem container = new DockerItem()
             {
-                containerId = txtRemoveContainerId.Text
+                containerId = txtRemoveContainerId.Text,
+                isUsingBatch = rdBtnBatch.Checked
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -201,7 +213,8 @@ namespace RemoteDockerUsingBatch
             lblOutputHeader.Text = "Removing Image ";
             DockerItem image = new DockerItem()
             {
-                imageName = txtRemoveImage.Text
+                imageName = txtRemoveImage.Text,
+                isUsingBatch = rdBtnBatch.Checked
             };
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -224,6 +237,7 @@ namespace RemoteDockerUsingBatch
     }
     public class DockerItem
     {
+        public bool isUsingBatch;
         public string imageName;
         public string containerName;
         public string containerId;

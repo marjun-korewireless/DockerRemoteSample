@@ -60,6 +60,8 @@
             this.txtRemoveImage = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.rdBtnPs = new System.Windows.Forms.RadioButton();
+            this.rdBtnBatch = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnPull
@@ -349,11 +351,36 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Remove an Image";
             // 
-            // test
+            // rdBtnPs
+            // 
+            this.rdBtnPs.AutoSize = true;
+            this.rdBtnPs.Checked = true;
+            this.rdBtnPs.Location = new System.Drawing.Point(618, 31);
+            this.rdBtnPs.Name = "rdBtnPs";
+            this.rdBtnPs.Size = new System.Drawing.Size(89, 17);
+            this.rdBtnPs.TabIndex = 35;
+            this.rdBtnPs.TabStop = true;
+            this.rdBtnPs.Text = "Use Ps Script";
+            this.rdBtnPs.UseVisualStyleBackColor = true;
+            // 
+            // rdBtnBatch
+            // 
+            this.rdBtnBatch.AutoSize = true;
+            this.rdBtnBatch.Location = new System.Drawing.Point(618, 50);
+            this.rdBtnBatch.Name = "rdBtnBatch";
+            this.rdBtnBatch.Size = new System.Drawing.Size(105, 17);
+            this.rdBtnBatch.TabIndex = 36;
+            this.rdBtnBatch.TabStop = true;
+            this.rdBtnBatch.Text = "Use Batch Script";
+            this.rdBtnBatch.UseVisualStyleBackColor = true;
+            // 
+            // OperationsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 496);
+            this.Controls.Add(this.rdBtnBatch);
+            this.Controls.Add(this.rdBtnPs);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRemoveImage);
@@ -386,7 +413,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtImageName);
             this.Controls.Add(this.btnPull);
-            this.Name = "test";
+            this.Name = "OperationsUI";
             this.Text = "test";
             this.Load += new System.EventHandler(this.test_Load);
             this.ResumeLayout(false);
@@ -428,6 +455,8 @@
         private System.Windows.Forms.TextBox txtRemoveImage;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton rdBtnPs;
+        private System.Windows.Forms.RadioButton rdBtnBatch;
     }
 }
 
