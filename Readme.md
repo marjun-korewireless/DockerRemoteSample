@@ -25,7 +25,7 @@ Let's see what happens in each line of this code.
 -	Line4 : Here we can set remote user name
 -	Line5 : This script generates a credential object using username and password set in the last two steps
 -	Line6 : This line set the execution policy. Setting Execution policy to 'Bypass' enables us to run unsigned scripts on remote machine
--	Line7 : This line runs the specified script in the remote machine using credentials object created in preceding steps. This is the major part of running powershell scripts on remote machine.
+-	Line7 : This line runs the specified script in the remote machine using credentials object created in preceding steps. This is the key point of running powershell scripts on remote machine.
 -	Line8 : Actual execution of scripts added in preceding steps happens here. Invoke() method initiates running of each script added using Addscript() method and returns the result or errors occurred while running the scripts.
 
 NB: Variables like userName, Password and ComputerName are set before this code.
